@@ -28,12 +28,14 @@ end
 
 puts "Parent 2 removing selected members: #{selected_members} is left as: #{parent_2}"
 
+difference = (array.length - child.length)
+
 random_slice.times do |i|
-	child[i] = parent_2[i]
+	child[i] = parent_2[difference + i]
 end
 
 (array.length - child.length).times do |i|
-	child[child.length] = parent_2[random_slice+i]
+	child[child.length] = parent_2[i]
 end
 
 puts "Final result child is #{child}"
